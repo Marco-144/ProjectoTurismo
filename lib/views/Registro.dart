@@ -1,15 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:proyecto_turismo/views/Itinerario.dart';
-import 'package:flutter/services.dart';
-import 'package:proyecto_turismo/views/Registro.dart';
-
-class Login extends StatelessWidget{
-  const Login({super.key});
-
+import 'package:proyecto_turismo/views/Login.dart';
+ 
+class Registro extends StatelessWidget {
+  const Registro({super.key});
+ 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF272727),
       body: Column(
@@ -26,7 +24,7 @@ class Login extends StatelessWidget{
                 fontWeight: FontWeight.w800,
                 fontFamily: 'Rubik',
               ),
-            ), 
+            ),
           ),
           Container(
             margin: const EdgeInsets.only(left: 40),
@@ -38,7 +36,7 @@ class Login extends StatelessWidget{
                 fontWeight: FontWeight.w800,
                 fontFamily: 'Rubik',
               ),
-            ), 
+            ),
           ),
           Container(
             margin: const EdgeInsets.only(left: 100),
@@ -50,11 +48,11 @@ class Login extends StatelessWidget{
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Rubik',
               ),
-            ), 
+            ),
           ),
-          const SizedBox(height: 120),
+          const SizedBox(height: 90),
           Container(
-            height: 220, 
+            height: 310, 
             width: 385, 
             decoration: BoxDecoration(
               color: const Color(0xFFE80000),
@@ -65,94 +63,172 @@ class Login extends StatelessWidget{
                 color: const Color(0xFFEF762F),
                 width: 3,
               ),
-              /*boxShadow: const [
-                BoxShadow(
-                  color: Color(0xFF383838),
-                  offset: Offset(0,6),
-                  blurRadius: 2
-                )
-              ]*/
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                /*const Padding(
+                  padding: EdgeInsets.only(
+                    top: 8,
+                    left: 35,
+                  ),
+                  child: Text(
+                    "Nombre",
+                    style: TextStyle(
+                      color: Color(0xFF272727),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Rubik',
+                    ),
+                  ),
+                ),*/
                 Padding(
                   padding: const EdgeInsets.only(
-                    bottom: 3,
                     top: 20,
                     left: 28,
                     right: 28
                   ),
                   child: Container(
                     height: 45,
-                    width: 300,
+                    width: 330,
                     decoration: BoxDecoration(
                       color: const Color(0xFFF8E2BB),
-                      borderRadius: const BorderRadius.all(Radius.circular(9)),
-                      border: Border.all(color: const Color(0xFFF6DCAC), width: 1),
+                      borderRadius: BorderRadius.circular(9),
+                      border: Border.all(color: const Color(0xFFF6DCAC), width: 1)
                     ),
                     child: const TextField(
                       decoration: InputDecoration(
-                        hintText: 'Correo',
-                        disabledBorder:InputBorder.none ,
                         border: InputBorder.none,
-                        prefixIcon: Icon(Icons.mail),
-                        iconColor: Color(0xFFFFFFFF),
-                        /*hintStyle: TextStyle(
-                          fontWeight: FontWeight.bold
-                        )*/
+                        hintText: 'Ingrese su nombre',
+                        disabledBorder: InputBorder.none,
+                        prefixIcon: Icon(Icons.person),
+                      ),
+                      style: TextStyle(
+                        fontFamily: 'Rubik',
                       ),
                     ),
                   ),
                 ),
+                const Padding(
+                  padding: EdgeInsets.only(
+                    top: 2,
+                    left: 35,
+                  ),
+                  child: Text(
+                    "Ejemplo: Juan David Perez Ramirez",
+                    style: TextStyle(
+                      color: Color(0xFF272727),
+                      fontSize: 11,
+                    ),
+                  ),
+                ),
+                /*const Padding(
+                  padding: EdgeInsets.only(
+                    top: 8,
+                    left: 35,
+                  ),
+                  child: Text(
+                    "Correo",
+                    style: TextStyle(
+                      color: Color(0xFF272727),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Rubik',
+                    ),
+                  ),
+                ),*/
                 Padding(
                   padding: const EdgeInsets.only(
-                    bottom: 2,
-                    top: 5,
+                    top: 15,
                     left: 28,
                     right: 28
                   ),
                   child: Container(
                     height: 45,
-                    width: 300,
+                    width: 330,
                     decoration: BoxDecoration(
                       color: const Color(0xFFF8E2BB),
-                      borderRadius: const BorderRadius.all(Radius.circular(9)),
-                      border: Border.all(color: const Color(0xFFF6DCAC), width: 1),
+                      borderRadius: BorderRadius.circular(9),
+                      border: Border.all(color: const Color(0xFFF6DCAC), width: 1)
                     ),
                     child: const TextField(
                       decoration: InputDecoration(
-                        hintText: 'Contraseña',
-                        disabledBorder:InputBorder.none ,
                         border: InputBorder.none,
-                        prefixIcon: Icon(Icons.lock),
-                        /*hintStyle: TextStyle(
-                          fontWeight: FontWeight.bold
-                        )*/
+                        hintText: 'Ingrese su correo electronico',
+                        disabledBorder: InputBorder.none,
+                        prefixIcon: Icon(Icons.mail),
+                      ),
+                      style: TextStyle(
+                        fontFamily: 'Rubik',
                       ),
                     ),
                   ),
                 ),
+                const Padding(
+                  padding: EdgeInsets.only(
+                    top: 2,
+                    left: 35,
+                  ),
+                  child: Text(
+                    "Ejemplo: ejemplo@correo.com",
+                    style: TextStyle(
+                      color: Color(0xFF272727),
+                      fontSize: 11,
+                    ),
+                  ),
+                ),
+                /*const Padding(
+                  padding: EdgeInsets.only(
+                    top: 8,
+                    left: 35,
+                  ),
+                  child: Text(
+                    "Contraseña",
+                    style: TextStyle(
+                      color: Color(0xFF272727),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Rubik',
+                    ),
+                  ),
+                ),*/
                 Padding(
                   padding: const EdgeInsets.only(
-                    top: 2.5,
-                    bottom: 1,
-                    left: 150,
+                    top: 15,
+                    left: 28,
+                    right: 28
                   ),
-                  child: GestureDetector(
-                    onTap: () {
-                      print("x");
-                    },
-                    child: const MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      child: Text(
-                        '¿Olvidaste tu contraseña?',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12,
-                          //fontFamily: 'Rubik'
-                        ),
+                  child: Container(
+                    height: 45,
+                    width: 330,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF8E2BB),
+                      borderRadius: BorderRadius.circular(9),
+                      border: Border.all(color: const Color(0xFFF6DCAC), width: 1)
+                    ),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Ingrese su contraseña',
+                        disabledBorder: InputBorder.none,
+                        prefixIcon: Icon(Icons.lock),
                       ),
+                      style: TextStyle(
+                        fontFamily: 'Rubik',
+                      ),
+                    ),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(
+                    top: 2,
+                    left: 35,
+                  ),
+                  child: Text(
+                    "Mínimo 8 caracteres",
+                    style: TextStyle(
+                      color: Color(0xFF272727),
+                      fontSize: 11,
                     ),
                   ),
                 ),
@@ -172,7 +248,7 @@ class Login extends StatelessWidget{
                         onPressed: () {
                           Navigator.push(
                             context, 
-                            MaterialPageRoute(builder: (context) => const Registro())
+                            MaterialPageRoute(builder: (context) => const Login())
                           );  
                         },
                         style: TextButton.styleFrom(
@@ -183,12 +259,12 @@ class Login extends StatelessWidget{
                             fontWeight: FontWeight.bold,
                             fontSize: 15.2
                           ),
-                          fixedSize: const Size(145, 42),
+                          fixedSize: const Size(140, 42),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12)
                           )
                         ),
-                        child: const Text('REGISTRARSE'),
+                        child: const Text('CANCELAR'),
                       )
                     ),
                     Container(
@@ -205,7 +281,7 @@ class Login extends StatelessWidget{
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const Itinerario())
+                            MaterialPageRoute(builder: (context) => const Login())
                           );
                         },
                         style: TextButton.styleFrom(
@@ -215,12 +291,12 @@ class Login extends StatelessWidget{
                             fontWeight: FontWeight.bold,
                             fontSize: 15.2
                           ),
-                          fixedSize: const Size(140, 42),
+                          fixedSize: const Size(145, 42),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12)
                           )
                         ),
-                        child: const Text('ENTRAR'),
+                        child: const Text('REGISTRARSE'),
                       )
                     ),
                   ],
@@ -229,8 +305,7 @@ class Login extends StatelessWidget{
             ),
           ),
         ],
-      )
+      ),
     );
   }
 }
-

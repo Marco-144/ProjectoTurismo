@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto_turismo/views/Itinerario.dart';
 import 'package:proyecto_turismo/views/Login.dart';
 import 'package:proyecto_turismo/views/Registro.dart';
 //import 'package:proyecto_turismo/views/Login_Pruebas.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),*/
-      home: Registro(),
+      home: Login(),
     );
   }
 }
